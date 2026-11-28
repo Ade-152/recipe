@@ -9,7 +9,7 @@ function Home({ currentUser, onLogout }) {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const[selectedMeal, setSelectedMeal] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("");
+
   const scrollToRecipes = () => {
   recipesRef.current?.scrollIntoView({
     behavior: "smooth",

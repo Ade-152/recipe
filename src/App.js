@@ -3,11 +3,12 @@ import "./App.css";
 import Home from "./component/home";
 function App() {
   const [isLogin, setIsLogin] = useState(true);
-  const [account, setAccount] = useState(null);
   const [currentUser, setCurrentUser] = useState("");
   const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("")
 
+  const [account, setAccount] = useState(() => {
+  const savedAccount = localStorage.getItem("tasteAccount");
+  return savedAccount ? JSON.parse(savedAccount) : null;});
   function handleSubmit(e) {
     e.preventDefault();
     const name = e.target.name?.value?.trim();
@@ -30,11 +31,18 @@ function App() {
         setMessage("This email is already registered.");
         return;
       }
-      setAccount({
-        name: name,
-        email: email,
-        password: password,
-      });
+     const newAccount = {
+  name,
+  email,
+  password,
+};
+
+setAccount(newAccount);
+
+localStorage.setItem(
+  "tasteAccount",
+  JSON.stringify(newAccount)
+);
       setMessage("Account created successfully! Please log in.");
       setIsLogin(true);
     }
