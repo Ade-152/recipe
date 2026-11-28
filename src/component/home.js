@@ -1,15 +1,13 @@
 import { useEffect, useState, useRef} from "react";
 
-
 function Home({ currentUser, onLogout }) {
      const recipesRef = useRef(null);
-
   const [categories, setCategories] = useState([]);
   const [meals, setMeals] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const[selectedMeal, setSelectedMeal] = useState(null);
-
+  const [selectedCategory, setSelectedCategory] = useState("");
   const scrollToRecipes = () => {
   recipesRef.current?.scrollIntoView({
     behavior: "smooth",
@@ -158,7 +156,7 @@ function Home({ currentUser, onLogout }) {
     <h3>Cooking Instructions</h3>
     <p>{selectedMeal.strInstructions}</p>
      <button onClick={() => setSelectedMeal(null)}>
-      Close ×
+      Close
     </button>
 
   </div>
