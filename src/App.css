@@ -1,0 +1,641 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f4efe6;
+  color: #354c3c;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 65px;
+  letter-spacing: 8px;
+  color: #354c3c;
+}
+
+.app p {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #a58b60;
+  margin-top: 10px;
+}
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  background: #f4efe6;
+}
+.auth-image {
+  width: 50%;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=85");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.image-overlay {
+  min-height: 100vh;
+  padding: 45px;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 35, 26, 0.25),
+    rgba(20, 35, 26, 0.75)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-overlay > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.image-overlay > p {
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+.image-text {
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.image-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.image-text p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.auth-form-section {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.auth-form {
+  width: 100%;
+  max-width: 430px;
+}
+.form-logo {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.form-logo h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #354c3c;
+}
+.form-logo p {
+  font-size: 12px;
+  color: #a58b60;
+  margin-top: 8px;
+}
+.form-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #354c3c;
+}
+.form-heading p {
+  color: #827d73;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.auth-tabs {
+  display: flex;
+  background: #e8e2d7;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 28px 0;
+}
+.auth-tabs button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  background: transparent;
+  color: #77766c;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.auth-tabs button.active {
+  background: #354c3c;
+  color: white;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+.form-group label {
+  color: #354c3c;
+  font-size: 13px;
+  font-weight: 600;
+}
+.form-group input {
+  padding: 15px;
+  border: 1px solid #dcd5ca;
+  border-radius: 9px;
+  outline: none;
+  background: #fffdf9;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.form-group input:focus {
+  border-color: #748b70;
+  box-shadow: 0 0 0 3px rgba(116, 139, 112, 0.12);
+}
+.form-group input::placeholder {
+  color: #b4afa5;
+}
+.forgot-password {
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 22px;
+}
+.forgot-password a {
+  color: #75866b;
+  text-decoration: none;
+  font-size: 13px;
+}
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: #354c3c;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background: #49644f;
+  transform: translateY(-2px);
+}
+
+.form-footer {
+  text-align: center;
+  color: #827d73;
+  font-size: 13px;
+  margin-top: 25px;
+}
+.form-footer span {
+  color: #526b52;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dashboard {
+  min-height: 100vh;
+  background: #f4efe6;
+}
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 7%;
+  background: white;
+  border-bottom: 1px solid #e5ded2;
+}
+.dashboard-nav h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 3px;
+  color: #354c3c;
+}
+.dashboard-nav button {
+  padding: 12px 25px;
+  background: #354c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dashboard-content {
+  padding: 100px 8%;
+}
+.dashboard-content > p:first-child {
+  color: #a58b60;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+.dashboard-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #354c3c;
+  margin: 15px 0;
+}
+.dashboard-content h2 {
+  font-size: 23px;
+  color: #657963;
+  margin-bottom: 15px;
+}
+.dashboard-content p:last-child {
+  color: #777;
+  line-height: 1.8;
+}
+.form-message {
+  color: #b65c45;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.home-page {
+  background: #f4efe6;
+  min-height: 100vh;
+  color: #354c3c;
+}
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 6%;
+  background: #fffdf9;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.home-navbar h2,
+.home-footer h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 3px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #52634f;
+  font-size: 14px;
+}
+.nav-links a:hover {
+  color: #b58c54;
+}
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+}
+.nav-user button {
+  background: #354c3c;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.hero-section {
+  min-height: 480px;
+  margin: 30px 6%;
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(25, 43, 32, 0.88),
+      rgba(25, 43, 32, 0.2)
+    ),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1400");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  color: white;
+}
+.hero-content {
+  max-width: 550px;
+}
+.hero-label {
+  color: #dfc18c;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-content h1 span {
+  color: #dfbd82;
+  font-style: italic;
+}
+.hero-content > p:not(.hero-label) {
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.hero-btn {
+  display: inline-block;
+  background: #c6a66b;
+  color: #273b2e;
+  padding: 15px 25px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.hero-btn:hover {
+  background: #e0c58e;
+  transform: translateY(-3px);
+}
+.search-section {
+  padding: 40px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.search-section h2,
+.section-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.search-section p {
+  color: #858176;
+  font-size: 14px;
+}
+.search-section input {
+  width: 350px;
+  max-width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd4c5;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+}
+.categories-section,
+.recipes-section {
+  padding: 40px 6%;
+}
+.section-heading {
+  margin-bottom: 30px;
+}
+.section-heading > div > p {
+  color: #b18b55;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+}
+.category-card {
+  background: #fffdf9;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.category-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+}
+.category-card h3 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  background: #fffdf9;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 20px;
+}
+
+.recipe-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.recipe-info p {
+  color: #928b7e;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.recipe-info button {
+  border: none;
+  background: #354c3c;
+  color: white;
+  padding: 11px 17px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.home-footer {
+  background: #354c3c;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+  margin-top: 50px;
+}
+.home-footer p {
+  color: #d5c8a9;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.recipe-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #f4efe6;
+  padding: 30px;
+  border-radius: 18px;
+  z-index: 1000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-details img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.recipe-details h2 {
+  color: #354c3c;
+  margin-bottom: 15px;
+}
+
+.recipe-details h3 {
+  margin: 15px 0 8px;
+}
+
+.recipe-details p {
+  line-height: 1.7;
+}
+
+.recipe-details button {
+  background: #354c3c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  .auth-image {
+    width: 40%;
+  }
+
+  .auth-form-section {
+    width: 60%;
+    padding: 25px;
+  }
+
+  .image-text h2 {
+    font-size: 30px;
+  }
+
+  .image-overlay {
+    padding: 25px;
+  }
+    .home-navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+   .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-section {
+    min-height: 400px;
+    padding: 30px;
+    margin: 20px;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .search-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-section input {
+    width: 100%;
+  }
+  .search-section h2,
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    width: 100%;
+    min-height: 280px;
+  }
+
+  .image-overlay {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .image-overlay > h1 {
+    font-size: 25px;
+  }
+
+  .image-text {
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+
+  .image-text h2 {
+    font-size: 32px;
+  }
+
+  .auth-form-section {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 25px;
+  }
+
+  .form-logo {
+    margin-bottom: 30px;
+  }
+
+  .form-heading h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 33px;
+  }
+
+  .nav-user {
+    flex-direction: column;
+  }
+}
